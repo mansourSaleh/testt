@@ -55,3 +55,6 @@ export const changePassword = (passwords, user) => {
     }
   })
 }
+export const allExample = () => {
+ return axios.get(apiUrl + '/examples')
+}

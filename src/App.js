@@ -9,7 +9,7 @@ import SignIn from './auth/components/SignIn'
 import SignOut from './auth/components/SignOut'
 import ChangePassword from './auth/components/ChangePassword'
 import AlertDismissible from './auth/components/AlertDismissible'
-
+import Example from './Example'
 class App extends Component {
   constructor () {
     super()
@@ -49,6 +49,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
+          )} />
+           <Route user={user} path='/examples' render={() => (
+            <Example alert={this.alert} user={user} />
           )} />
         </main>
       </React.Fragment>
